@@ -17,10 +17,10 @@ class MiraklSeller_Process_Model_Core_Cookie extends Mage_Core_Model_Cookie
     /**
      * {@inheritdoc}
      */
-    public function renew($name, $period = null, $path = null, $domain = null, $secure = null, $httponly = null)
+    public function renew($name, $period = null, $path = null, $domain = null, $secure = null, $httponly = null, $samesite = null)
     {
         if (!$this->isMiraklProcessAsync()) {
-            parent::renew($name, $period, $path, $domain, $secure, $httponly);
+            parent::renew($name, $period, $path, $domain, $secure, $httponly, $samesite);
         }
 
         return $this;
